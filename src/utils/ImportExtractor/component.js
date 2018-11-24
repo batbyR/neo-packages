@@ -28,7 +28,7 @@ export const getPackageComponentsFromLine = line => {
 export const getPackageOriginFromLine = line => {
   const origin = line.match(ORIGIN_REGEX)
   if (origin) {
-    return origin[0].replace('from ', '')
+    return origin[0].replace('from ', '').slice(1, -1)
   } else {
     return ''
   }
